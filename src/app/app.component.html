@@ -5,11 +5,11 @@
 <main>
   <section>
     <h2>Simple text</h2>
-    <p>{{ simpleText }}</p>
+    <app-text [innerContent]="text"></app-text>
   </section>
 
-  <section>
-    <h2>Text with new lines</h2>
-    <p>{{ textWithNewLines }}</p>
+  <section class="styled">
+    <h2>Text with custom styles</h2>
+    <app-text [innerContent]="text"></app-text>
   </section>
 </main>
