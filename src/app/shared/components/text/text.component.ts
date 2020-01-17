@@ -1,4 +1,10 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  Input,
+  ContentChild,
+  TemplateRef
+} from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -9,9 +15,11 @@ import { map } from 'rxjs/operators';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TextComponent {
+  @ContentChild('paragraphTemplate', { static: true })
+  paragraphTemplateRef: TemplateRef<any>;
   private text$ = new BehaviorSubject('');
 
-  lines$ = this.text$.asObservable().pipe(
+  paragraphs$ = this.text$.asObservable().pipe(
     map((content: string) =>
       content
         .split('\n')

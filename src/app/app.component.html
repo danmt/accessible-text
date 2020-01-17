@@ -1,15 +1,22 @@
-<header>
-  <h1>Accessible Text</h1>
+<header aria-labelledby="page-title">
+  <h1 id="page-title">Accessible Text</h1>
 </header>
 
 <main>
-  <section>
-    <h2>Simple text</h2>
+  <section aria-labelledby="simple-text-title">
+    <h2 id="simple-text-title">Simple text</h2>
     <app-text [innerContent]="text"></app-text>
   </section>
 
-  <section class="styled">
-    <h2>Text with custom styles</h2>
-    <app-text [innerContent]="text"></app-text>
+  <section aria-labelledby="text-with-custom-style-title" class="styled">
+    <h2 id="text-with-custom-style-title">Text with custom styles</h2>
+    <app-text [innerContent]="text">
+      <ng-template #paragraphTemplate let-ctx>
+        <p class="custom-paragraph" [ngClass]="{ first: ctx.first }">
+          {{ ctx.paragraph }}
+        </p>
+        <div *ngIf="!ctx.last" class="custom-separator"></div>
+      </ng-template>
+    </app-text>
   </section>
 </main>
