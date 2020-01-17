@@ -8,14 +8,26 @@
     <app-text [innerContent]="text"></app-text>
   </section>
 
-  <section aria-labelledby="text-with-custom-style-title" class="styled">
-    <h2 id="text-with-custom-style-title">Text with custom styles</h2>
+  <section aria-labelledby="text-custom-a-title" class="custom-a card">
+    <h2 id="text-custom-a-title">Text custom A</h2>
     <app-text [innerContent]="text">
       <ng-template #paragraphTemplate let-ctx>
-        <p class="custom-paragraph" [ngClass]="{ first: ctx.first }">
+        <p class="custom-a__paragraph" [ngClass]="{ first: ctx.first }">
           {{ ctx.paragraph }}
         </p>
-        <div *ngIf="!ctx.last" class="custom-separator"></div>
+        <div *ngIf="!ctx.last" class="custom-a__separator"></div>
+      </ng-template>
+    </app-text>
+  </section>
+
+  <section aria-labelledby="text-custom-b-title" class="custom-b card">
+    <h2 id="text-custom-b-title">Text custom B</h2>
+    <app-text [innerContent]="text">
+      <ng-template #paragraphTemplate let-ctx>
+        <p class="custom-b__paragraph" [ngClass]="{ first: ctx.first }">
+          {{ ctx.paragraph }}
+        </p>
+        <div *ngIf="!ctx.last" class="custom-b__separator"></div>
       </ng-template>
     </app-text>
   </section>
