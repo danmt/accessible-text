@@ -12,10 +12,4 @@ export class AppComponent {
     Paragraph #3
     Paragraph #4
   `;
-  textWithNewLines = `
-    Paragraph #1\n
-    Paragraph #2\n
-    Paragraph #3\n
-    Paragraph #4\n
-  `;
 }
