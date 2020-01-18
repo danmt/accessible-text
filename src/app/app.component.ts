@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   simpleText = `
-    Paragraph #1
-    Paragraph #2
-    Paragraph #3
-    Paragraph #4
+    Paragraph #1 Paragraph #1 Paragraph #1 Paragraph #1 Paragraph #1 Paragraph #1 Paragraph #1 Paragraph #1 Paragraph #1 Paragraph #1 Paragraph #1 Paragraph #1
+    Paragraph #2 Paragraph #2 Paragraph #2 Paragraph #2 Paragraph #2 Paragraph #2 Paragraph #2 Paragraph #2 Paragraph #2 Paragraph #2 Paragraph #2 Paragraph #2
+    Paragraph #3 Paragraph #3 Paragraph #3 Paragraph #3 Paragraph #3 Paragraph #3 Paragraph #3 Paragraph #3 Paragraph #3 Paragraph #3 Paragraph #3 Paragraph #3
+    Paragraph #4 Paragraph #4 Paragraph #4 Paragraph #4 Paragraph #4 Paragraph #4 Paragraph #4 Paragraph #4 Paragraph #4 Paragraph #4 Paragraph #4 Paragraph #4
   `;
 }
