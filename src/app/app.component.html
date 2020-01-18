@@ -3,32 +3,34 @@
 </header>
 
 <main>
-  <section aria-labelledby="simple-text-title">
+  <article aria-labelledby="simple-text-title" class="card">
     <h2 id="simple-text-title">Simple text</h2>
     <app-text [innerContent]="text"></app-text>
-  </section>
+  </article>
 
-  <section aria-labelledby="text-custom-a-title" class="custom-a card">
-    <h2 id="text-custom-a-title">Text custom A</h2>
+  <article aria-labelledby="text-custom-a-title" class="custom-a card">
+    <h2 id="text-custom-a-title" class="custom-a__title">Text custom A</h2>
     <app-text [innerContent]="text">
       <ng-template #paragraphTemplate let-ctx>
-        <p class="custom-a__paragraph" [ngClass]="{ first: ctx.first }">
-          {{ ctx.paragraph }}
-        </p>
-        <div *ngIf="!ctx.last" class="custom-a__separator"></div>
+        <app-custom-a
+          [paragraph]="ctx.paragraph"
+          [isFirst]="ctx.first"
+          [isLast]="ctx.last"
+        ></app-custom-a>
       </ng-template>
     </app-text>
-  </section>
+  </article>
 
-  <section aria-labelledby="text-custom-b-title" class="custom-b card">
-    <h2 id="text-custom-b-title">Text custom B</h2>
+  <article aria-labelledby="text-custom-b-title" class="custom-b card">
+    <h2 id="text-custom-b-title" class="custom-b__title">Text custom B</h2>
     <app-text [innerContent]="text">
       <ng-template #paragraphTemplate let-ctx>
-        <p class="custom-b__paragraph" [ngClass]="{ first: ctx.first }">
-          {{ ctx.paragraph }}
-        </p>
-        <div *ngIf="!ctx.last" class="custom-b__separator"></div>
+        <app-custom-b
+          [paragraph]="ctx.paragraph"
+          [isFirst]="ctx.first"
+          [isLast]="ctx.last"
+        ></app-custom-b>
       </ng-template>
     </app-text>
-  </section>
+  </article>
 </main>

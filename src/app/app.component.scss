@@ -1,63 +1,27 @@
-section {
-  margin-bottom: 1rem;
-}
-
 .card {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border: 1px solid black;
+  width: 600px;
+  margin-bottom: 1rem;
 }
 
 .custom-a {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border: 1px solid black;
   background-color: #111122;
   color: #cceeff;
-  padding: 1rem;
-  width: 400px;
-
-  &__paragraph {
-    background-color: #222233;
-    color: #aaccff;
-    margin: 0;
-    text-align: justify;
-
-    &.first {
-      &::first-letter {
-        font-size: 200%;
-        color: #bbddff;
-      }
-    }
-  }
-
-  &__separator {
-    height: 1rem;
-  }
 }
 
 .custom-b {
   font-family: 'Courier New', Courier, monospace;
-  border: 1px solid black;
   background-color: #221111;
   color: #ffeecc;
-  padding: 1rem;
-  width: 500px;
+  column-count: 2;
+  column-gap: 40px;
+  column-rule-style: solid;
+  column-rule-color: #ffccaa;
 
-  &__paragraph {
-    background-color: #332222;
-    color: #ffccaa;
-    margin: 0;
-    text-align: justify;
-    text-indent: 2rem;
-
-    &.first {
-      &::first-letter {
-        font-size: 250%;
-        font-family: 'Times New Roman', Times, serif;
-        color: #ffddbb;
-      }
-    }
-  }
-
-  &__separator {
-    height: 1rem;
+  &__title {
+    column-span: all;
   }
 }

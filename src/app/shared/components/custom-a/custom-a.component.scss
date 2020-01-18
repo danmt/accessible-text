@@ -1,0 +1,19 @@
+.paragraph {
+  background-color: #222233;
+  color: #aaccff;
+  margin: 0;
+  margin-bottom: 1rem;
+  text-align: justify;
+  line-height: 1.4;
+
+  &.first {
+    &::first-letter {
+      font-size: 200%;
+      color: #bbddff;
+    }
+  }
+
+  &.last {
+    margin-bottom: 0;
+  }
+}

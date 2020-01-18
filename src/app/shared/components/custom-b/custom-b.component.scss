@@ -1,0 +1,21 @@
+.paragraph {
+  background-color: #332222;
+  color: #ffccaa;
+  margin: 0;
+  margin-bottom: 1rem;
+  text-align: justify;
+  text-indent: 2rem;
+  line-height: 1.5;
+
+  &.first {
+    &::first-letter {
+      font-size: 250%;
+      font-family: 'Times New Roman', Times, serif;
+      color: #ffddbb;
+    }
+  }
+
+  &.last {
+    margin-bottom: 0;
+  }
+}
