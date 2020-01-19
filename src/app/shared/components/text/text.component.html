@@ -1,1 +1,12 @@
-<p *ngFor="let paragraph of paragraphs$ | async">{{ paragraph }}</p>
+<ng-template #defaultParagraphTemplate let-ctx>
+  <p>{{ ctx.paragraph }}</p>
+</ng-template>
+
+<ng-container
+  *ngFor="let paragraph of paragraphs$ | async; let first = first"
+  [ngTemplateOutlet]="paragraphTemplateRef || defaultParagraphTemplate"
+  [ngTemplateOutletContext]="{
+    $implicit: { first: first, paragraph: paragraph }
+  }"
+>
+</ng-container>

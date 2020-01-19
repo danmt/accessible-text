@@ -5,3 +5,36 @@
   width: 600px;
   margin-bottom: 1rem;
 }
+
+.custom {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #111122;
+  color: #cceeff;
+  column-count: 2;
+  column-gap: 40px;
+  column-rule-style: solid;
+  column-rule-color: #cceeff;
+
+  &__title {
+    column-span: all;
+    text-align: center;
+  }
+
+  &__paragraph {
+    background-color: #222233;
+    color: #aaccff;
+    margin: 0;
+    margin-bottom: 2rem;
+    text-align: justify;
+    text-indent: 2rem;
+    line-height: 2;
+
+    &.first {
+      &::first-letter {
+        font-size: 200%;
+        font-family: 'Times New Roman', Times, serif;
+        color: #bbddff;
+      }
+    }
+  }
+}

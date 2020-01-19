@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ContentChild, TemplateRef } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -8,6 +8,8 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./text.component.scss']
 })
 export class TextComponent {
+  @ContentChild('paragraphTemplate', { static: true })
+  paragraphTemplateRef: TemplateRef<any>;
   private text$ = new BehaviorSubject('');
 
   // Observable that emits a text content splitted

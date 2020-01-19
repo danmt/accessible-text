@@ -8,9 +8,15 @@
     <app-text [innerContent]="simpleText"></app-text>
   </article>
 
-  <article class="card">
-    <h2>Text Custom A</h2>
-    <app-text [innerContent]="simpleText"></app-text>
+  <article class="card custom">
+    <h2 class="custom__title">Custom Text</h2>
+    <app-text [innerContent]="simpleText">
+      <ng-template #paragraphTemplate let-ctx>
+        <p class="custom__paragraph" [ngClass]="{ first: ctx.first }">
+          {{ ctx.paragraph }}
+        </p>
+      </ng-template>
+    </app-text>
   </article>
 
   <article class="card">
